@@ -18,9 +18,10 @@ body {
 }
 
 main {
-  background: url(images/background.svg) ;
-  width: 375px;
-  height: 812px;
+  background: url(images/background.svg) no-repeat center/cover;
+  width: 100vw; /* viewport width*/
+  min-height: 812px;
+  height: 100vh;
 }
 
 .container {
@@ -51,16 +52,15 @@ main {
   object-fit: cover;
 
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); /*Ver "clippy css" */
-
-
 }
 
 .rotate-center {
-  -webkit-animation: rotate-center 15s linear both;
-          animation: rotate-center 15s linear both;
+	-webkit-animation: rotate-center 15s linear infinite ;
+	        animation: rotate-center 15s linear infinite ;
 }
 
-@-webkit-keyframes rotate-center {
+
+ @-webkit-keyframes rotate-center {
   0% {
     -webkit-transform: rotate(0);
             transform: rotate(0);
@@ -80,6 +80,7 @@ main {
             transform: rotate(360deg);
   }
 }
+
 
 h1 {
   font-size: 1.5rem;
